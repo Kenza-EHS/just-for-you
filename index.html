@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Happy Birthday, Nurul Azkiya</title>
+
+    <!-- Bootstrap -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- =============================
+        STAR BACKGROUND
+    ============================== -->
+    <!-- ==========================================
+        OPENING SCREEN
+=========================================== -->
+
+    <div id="opening-screen">
+      <div class="opening-content">
+        <div class="gift-icon">🎁</div>
+
+        <span class="opening-tag"> A Little Gift </span>
+
+        <h1>
+          Happy Birthday
+
+          <span> Nurul Azkiya </span>
+        </h1>
+
+        <p>
+          Website kecil ini dibuat khusus untukmu. Semoga hari ini menjadi awal
+          dari tahun yang penuh kebahagiaan.
+        </p>
+
+        <button id="openGift">Buka Hadiah</button>
+      </div>
+    </div>
+
+    <div id="stars"></div>
+
+    <!-- =============================
+        BUBBLE
+    ============================== -->
+
+    <div id="bubble-container"></div>
+
+    <!-- =============================
+        MUSIC
+    ============================== -->
+
+    <audio id="bgMusic" loop>
+      <source src="music/music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- =============================
+        NAVBAR
+    ============================== -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"> Nurul Azkiya </a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about"> Tentang </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#memory"> Kenangan </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#letter"> Surat </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =============================
+            HERO
+    ============================== -->
+
+    <section id="hero">
+      <div class="hero-gradient"></div>
+
+      <div class="container">
+        <div class="row align-items-center min-vh-100">
+          <!-- LEFT -->
+
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="hero-tag"> 19 Juli 2026 </span>
+
+            <h1>
+              Happy Birthday,
+
+              <span> Maaiiiiciiaaaaaa </span>
+            </h1>
+
+            <p>
+              Sebuah website kecil berisi sedikit kenangan yang tersimpan
+              bersamamu.
+            </p>
+
+            <div class="hero-button">
+              <a href="#about" class="btn-start">
+                Mulai
+
+                <i class="bi bi-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="col-lg-6" data-aos="zoom-in">
+            <div class="hero-image">
+              <img src="img/hero.jpeg" alt="Hero" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wave -->
+
+      <div class="hero-wave">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+          <path
+            fill="#ffffff"
+            d="M0,224L80,202.7C160,181,320,139,480,144C640,149,800,203,960,213.3C1120,224,1280,192,1360,176L1440,160L1440,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+    <!-- =========================================================
+        ABOUT
+    ========================================================== -->
+
+    <section id="about">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-8" data-aos="fade-up">
+            <span class="section-tag"> Tentang Kamu </span>
+
+            <h2 class="section-title">Untuk Azkiyaaa</h2>
+
+            <p class="section-text">
+              Selamat ulang tahun. Terima kasih sudah sedikit mengganggu
+              banyaknya cerita dalam perjalanan hidupku. Semoga di usia yang
+              baru, kamu selalu diberi kesehatan, kebahagiaan, dan keberanian
+              untuk mengejar semua impianmu.
+            </p>
+
+            <p class="section-text">
+              Website sederhana ini bukan hadiah yang besar, tapi semoga bisa
+              menjadi tempat kecil untuk menyimpan beberapa kenangan yang pernah
+              kita buat bersama.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+        MEMORY WALL
+    ========================================================== -->
+
+    <section id="memory">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag"> Kenangan </span>
+
+          <h2 class="section-title">Memory Wall</h2>
+
+          <p class="section-text">
+            Beberapa potongan cerita yang semoga selalu menyenangkan untuk
+            dikenang.
+          </p>
+        </div>
+
+        <!-- =====================
+                WALL
+            ====================== -->
+
+        <div class="memory-wall">
+          <!-- FOTO 1 -->
+
+          <div class="memory-item big" data-aos="zoom-in">
+            <img src="img/foto1.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 2 -->
+
+          <div class="memory-item small" data-aos="fade-up">
+            <img src="img/foto2.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 3 -->
+
+          <div class="memory-item medium" data-aos="fade-left">
+            <img src="img/foto3.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 4 -->
+
+          <div class="memory-item medium" data-aos="fade-right">
+            <img src="img/foto4.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 5 -->
+
+          <div class="memory-item big" data-aos="zoom-in">
+            <img src="img/foto5.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 6 -->
+
+          <div class="memory-item small">
+            <img src="img/foto6.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 7 -->
+
+          <div class="memory-item medium">
+            <img src="img/foto7.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 8 -->
+
+          <div class="memory-item medium">
+            <img src="img/foto8.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 9 -->
+
+          <div class="memory-item small">
+            <img src="img/foto9.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 10 -->
+
+          <div class="memory-item big">
+            <img src="img/foto10.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 11 -->
+
+          <div class="memory-item medium">
+            <img src="img/foto11.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 12 -->
+
+          <div class="memory-item small">
+            <img src="img/foto12.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 13 -->
+
+          <div class="memory-item medium">
+            <img src="img/foto13.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 14 -->
+
+          <div class="memory-item big">
+            <img src="img/foto14.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 15 -->
+
+          <div class="memory-item small">
+            <img src="img/foto15.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 16 -->
+
+          <div class="memory-item medium">
+            <img src="img/foto16.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 17 -->
+
+          <div class="memory-item medium">
+            <img src="img/foto17.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 18 -->
+
+          <div class="memory-item small">
+            <img src="img/foto18.jpeg" alt="" />
+          </div>
+
+          <!-- FOTO 19 -->
+
+          <div class="memory-item big">
+            <img src="img/foto19.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =====================================
+            LETTER
+    ====================================== -->
+
+    <section id="letter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="letter-card" data-aos="fade-up">
+              <span class="section-tag"> Surat </span>
+
+              <h2>Happy Birthday</h2>
+
+              <p>Hai, Nurul Azkiya.</p>
+
+              <p>
+                Selamat ulang tahun. Terima kasih sudah menjadi pengganggu kecil
+                dalam cerita hidupku. Terima kasih untuk semua tawa, cerita,
+                perhatian, dan waktu yang sudah kita lewati bersama. Meski ini
+                masih begitu singkat.
+              </p>
+
+              <p>
+                Aku berharap di usia yang terus menua, kamu selalu diberikan
+                kesehatan, kebahagiaan, dan kesempatan untuk meraih semua hal
+                yang kamu impikan.
+              </p>
+
+              <p>
+                Semoga nanti ketika kita melihat kembali website kecil ini, kita
+                bisa terus tersenyum karena pernah membuat kenangan-kenangan ini
+                bersama.
+              </p>
+
+              <p>Happy Birthday, Azkiyaaa.</p>
+
+              <div class="signature">— Ekahido Sapati</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+            QUOTE
+    ====================================== -->
+
+    <section id="quote">
+      <div class="container">
+        <div class="quote-box" data-aos="zoom-in">
+          <i class="bi bi-stars"></i>
+
+          <h3>"Some memories are too precious to stay only in our minds."</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================
+            FOOTER
+    ====================================== -->
+
+    <footer>
+      <div class="container">
+        <h4>Happy Birthday, Maaiiiiciiaaaaaa</h4>
+
+        <p>Made with ❤️ by Enjaaa</p>
+      </div>
+    </footer>
+
+    <!-- =====================================
+            MODAL
+    ====================================== -->
+
+    <div class="modal fade" id="photoModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+
+          <img id="modalImage" src="" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    <!-- ==========================================
+        MUSIC BUTTON
+=========================================== -->
+
+    <button id="musicToggle">
+      <i class="bi bi-volume-up-fill"></i>
+    </button>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS -->
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Script -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
