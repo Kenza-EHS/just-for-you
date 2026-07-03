@@ -453,12 +453,10 @@ section {
 =========================================================== */
 
 .hero-image {
-  width: 430px;
-
+  width: 100%; /* Diubah menjadi 100% agar gambarnya elastis mengikuti lebar HP */
+  max-width: 430px; /* Ditambahkan agar saat di laptop ukurannya tidak menjadi raksasa */
   margin: auto;
-
   position: relative;
-
   animation: floating 5s ease-in-out infinite;
 }
 
@@ -1538,12 +1536,21 @@ footer::after {
 
 .opening-content h1 {
   margin-top: 30px;
-
   font-family: "Playfair Display", serif;
-
-  font-size: 58px;
-
+  font-size: clamp(
+    2.2rem,
+    7vw,
+    3.6rem
+  ); /* Menggunakan clamp agar otomatis mengecil di HP */
+  padding: 0 10px; /* Memberi jarak agar tidak menempel ke tepi layar HP */
   color: var(--navy);
+}
+
+.opening-content p {
+  margin: 20px auto !important; /* Memperkecil jarak atas-bawah yang terlalu renggang di HP */
+  max-width: 480px;
+  line-height: 2;
+  padding: 0 15px; /* Memberi jarak di sisi kiri-kanan layar HP */
 }
 
 .opening-content h1 span {
@@ -1552,14 +1559,6 @@ footer::after {
   margin-top: 10px;
 
   color: var(--pink-dark);
-}
-
-.opening-content p {
-  margin: 35px auto;
-
-  max-width: 480px;
-
-  line-height: 2;
 }
 
 #openGift {
@@ -1670,5 +1669,54 @@ body.lock {
 
   100% {
     transform: scale(1);
+  }
+}
+/* ===========================================================
+   KODE TAMBAHAN KHUSUS UNTUK TAMPILAN HP (RESPONSIF)
+=========================================================== */
+
+/* Membuat menu navbar dropdown di HP memiliki latar belakang putih blur saat dibuka */
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 18px;
+    margin-top: 15px;
+    box-shadow: var(--shadow-md);
+  }
+
+  .nav-link::after {
+    left: 0 !important;
+  }
+}
+
+/* Mengubah susunan dinding foto (Memory Wall) dari 1 kolom menjadi 2 kolom rapi di HP */
+@media (max-width: 768px) {
+  .memory-wall {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 140px !important;
+    gap: 12px !important;
+    margin-top: 40px;
+  }
+
+  .small,
+  .medium {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+
+  /* Foto bertipe 'big' akan memakan space 2 kolom penuh agar estetik */
+  .big {
+    grid-column: span 2 !important;
+    grid-row: span 2 !important;
+  }
+}
+
+/* Optimasi tambahan untuk HP berlayar sangat ramping */
+@media (max-width: 480px) {
+  .memory-wall {
+    grid-auto-rows: 110px !important;
   }
 }
