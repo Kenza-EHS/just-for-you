@@ -56,15 +56,17 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
+body {
+  overflow-x: hidden; /* Mengunci total agar halaman tidak bisa digeser ke kanan */
+  width: 100%;
+  position: relative;
+}
+
 body {
   font-family: "Poppins", sans-serif;
-
   background: var(--background);
-
   color: var(--text);
-
-  overflow-x: hidden;
-
   line-height: 1.8;
 }
 
@@ -1718,5 +1720,28 @@ body.lock {
 @media (max-width: 480px) {
   .memory-wall {
     grid-auto-rows: 110px !important;
+  }
+}
+/* --- FIX OVERFLOW DI SEBELAH KANAN LAYAR HP --- */
+@media (max-width: 768px) {
+  /* Mengecilkan lingkaran gradasi dekorasi agar tidak meluber keluar layar HP */
+  .hero-gradient::before {
+    width: 300px !important;
+    height: 300px !important;
+    top: -100px !important;
+    left: -100px !important;
+  }
+
+  .hero-gradient::after {
+    width: 300px !important;
+    height: 300px !important;
+    right: -100px !important;
+    bottom: -100px !important;
+  }
+
+  /* Mengamankan kontainer utama */
+  .container {
+    max-width: 100% !important;
+    overflow: hidden;
   }
 }
