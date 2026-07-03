@@ -1694,28 +1694,28 @@ body.lock {
   }
 }
 
-/* Mengubah susunan dinding foto (Memory Wall) dari 1 kolom menjadi 2 kolom rapi di HP */
 @media (max-width: 768px) {
   .memory-wall {
-    grid-template-columns: repeat(2, 1fr) !important;
-    grid-auto-rows: 140px !important;
-    gap: 12px !important;
+    display: block !important; /* Mematikan sistem grid kaku di HP */
+    column-count: 2; /* Membagi halaman jadi 2 kolom mengalir ala Pinterest */
+    column-gap: 12px;
     margin-top: 40px;
   }
 
-  .small,
-  .medium {
-    grid-column: span 1 !important;
-    grid-row: span 1 !important;
+  .memory-item {
+    display: inline-block;
+    width: 100%;
+    height: auto !important; /* Membuat tinggi kotak mengikuti bentuk asli foto */
+    margin-bottom: 12px;
+    break-inside: avoid; /* Mencegah foto retak/terpotong di tengah kolom */
+    transform: none !important;
   }
 
-  /* Foto bertipe 'big' akan memakan space 2 kolom penuh agar estetik */
-  .big {
-    grid-column: span 2 !important;
-    grid-row: span 2 !important;
+  .memory-item img {
+    height: auto !important; /* Memastikan foto kembali ke proporsi aslinya */
+    object-fit: contain !important; /* 100% foto utuh tanpa terpotong */
   }
 }
-
 /* Optimasi tambahan untuk HP berlayar sangat ramping */
 @media (max-width: 480px) {
   .memory-wall {
